@@ -319,7 +319,6 @@ void get_time(int a, int b) {
     int h = 0, m = 0, s = 0, i = 0, l = 0;
     int hp = 0, mp = 0, sp = 0;
     _strtime(time);
-    printf("%s", time);
     for (i = 0; i < 2; i++) {
         h = h * 10 + ((int) time[i]) - 48;
         m = m * 10 + ((int) time[i + 3]) - 48;
@@ -329,12 +328,10 @@ void get_time(int a, int b) {
         h = 0;
     else if (h >= 12)
         h = h - 12;
-    printf("\n %d %d %d", h, m, s);
     sp = s;
     mp = m;
     hp = h * 5;
     hp = hp + m / 12;
-    printf("\n %d %d %d", hp, mp, sp);
     for (i = 0; i <= 15; i++) {
         if (i % 5 == 0)
             l = 2;
